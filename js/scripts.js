@@ -17,8 +17,12 @@ window.addEventListener('DOMContentLoaded', event => {
         }
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink')
+            document.getElementById('portfolioID').style.color = '#2345d9';
+            document.getElementById('aboutID').style.color = '#2345d9'
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
+            document.getElementById('portfolioID').style.color = '#fff'
+            document.getElementById('aboutID').style.color = '#fff'
         }
 
     };
