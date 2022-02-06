@@ -56,10 +56,10 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-folder-open fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/project1/p1_Akash_Magnadia.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Project 1</div>
+                                <div class="portfolio-caption-heading">Project 1 - CTA Subway Data Visualization</div>
                             </div>
                         </div>
                     </div>
@@ -227,20 +227,176 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Threads
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Illustration
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Project 1</h2>
+                                    <p class="item-intro text-muted">CTA Subway Data Visualization</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project1/p1_Akash_Magnadia.png" alt="..." />
+
+                                    <h3 class="text-secondary text-uppercase mb-1">Introduction</h3>
+                                    <p class="mb-5">This is the first project in CS 424: Data Analysis and Visualization class.
+                                        The primary intention for creating this visualization is to display ridership data for the
+                                        CTA Train network for each station and years ranging from 2001 to 2021 in an easy-to-understand fashion.
+                                        This project uses R as the main language, the following packages (shiny, shinydashboard, lubridate, scales, ggplot2, DT, tidyr) to preprocess, manipulate,
+                                        and plot the data, RStudio as the primary development environment, and ShinyApps.io as the preferred location for the deployment of the app.</p>
+
+                                    <h3 class="text-secondary text-uppercase mb-1">How to use</h3>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project1/Screenshot_p1_2.png" alt="..." style="float: left; padding-right: 30px;"/>
+                                    <p class="mb-5" style="text-align: justify;">In this visualization, the data is displayed in a variety of bar graphs and data tables.
+                                        On the left, there are four menu options to chose from. "About" give a brief introduction to the project.
+                                        "Graph and Table" takes you to the body that shows plots on the top portion and corresponding data for the plot in a table.
+                                        Here you can specify what pair of graph and table you want to display together.
+                                        You can choose to display data about each day in the year, each month in a year, or each day of the week in a year.
+                                        "Two Graphs" takes you to the body that shows a variety of plots on top and bottom with independent controls for both portions.
+                                        Here you can have the same set of controls, but they manipulate two groups of graphs independently.
+                                        "Interesting insights" sets the control to point you towards an insight with a brief description regarding the insight.
+                                        For each group of plots, there are three types of control to customize how you would like to see that data. </p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project1/Screenshot_p1_1.png" alt="..." style="float: right; padding-left: 30px;"/>
+                                    <p class="mb-5" style="text-align: justify;">The first thing you can do is control the time frame that you would like to hone in on.
+                                        For the time frame, there are three controls: Year, Month, and Week.
+                                        These controls can be selected and deselected in any combination to show the corresponding graph.
+                                        When "Year" is selected in Time Frame, the graph is shown for the range of time selected, whether that be one year or every year.
+                                        When "Month" is selected in Time Frame, the graph is shown to display data about the month for the selected time range, whether that be one year or every year.
+                                        When "Week" is selected in Time Frame, the graph is shown to display data about each day of the week for the selected time range, whether that be one year or every year.
+                                        The second thing you can do is select a year to populate data about a single year for the selected station(s).
+                                        Furthermore, you can pick "Every" if you would like to see data from every year.
+                                        The third thing you can do with controls is filter data by following three stations: UIC-Halsted, O'Hare Airport, and Rosemont.
+                                        You can also pick "Every" if you would like to see data from every station for the selected time range.</p>
+
+                                    <h3 class="text-secondary text-uppercase mb-1">Data attributes</h3>
+                                    <p class="mb-5">The data used in this visualization is from cityofchicago.org, and the link to the data set is at the bottom.
+                                        From there I downloaded the TSV file that contains all the data needed for this visualization.
+                                        I knew I needed to upload this project to shinyapps.io and host website contains a 5 MB limit,
+                                        so I split the file up using a python script so that I can upload it to shinyapps.io where this project is hosted.
+                                        All the manipulation from here on is done in the R application.
+                                        First, I read each TSV file and converted it into one data frame so that it can be easily manipulated.
+                                        Then I created a new column for the date that uses internal format.
+                                        Afterward, I created three new columns for year, date, and month.
+                                        Then, I set each of those three columns to be set as numeric values.
+                                        Afterward, I created a column for the name of the month so that the month can be displayed in the graph.
+                                        Then, I created a new column for the day of the week so that it can be displayed in the graph as well.
+                                        Then I created a new column of char to show entries at each station with a comma in the number so that the user can
+                                        easily understand a big number while looking at the y-axis.
+                                        Next, I removed three columns that won't be used to make data manipulation ad processing faster when it comes time to display plots and tables.
+                                        After which, I corrected the station name of O'Hare Airport,
+                                        which was without the comma during the data parsing process to be able to capture the entirety of the data.
+                                        Then, I created three new data frames for each station.
+                                        In the later steps, I utilize the filtered data frames instead of calling the data frame that contains all the data to make rendering the plot faster.
+                                        That's how I preprocess the data for this project.
+                                        If you would like to use the data files to reproduce this project then those details can be found on GitHub page linked below.
+                                        It also contains data that are already split into chunks less than 5 MB so that it can be uploaded to shinyapps.io in the future.
+                                    </p>
+
+                                    <h3 class="text-secondary text-uppercase mb-1">Interesting Insights</h3>
+
+                                    <div id="project1CarouselIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                                        <ol class="carousel-indicators bg-dark">
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="1" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="2" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="3" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="4" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="5" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="6" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="7" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="8" class=""></li>
+                                            <li data-target="#project1CarouselIndicators" data-slide-to="9" class=""></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight1.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight2.png" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight3.png" alt="Third slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight4.png" alt="Forth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight5.png" alt="Fifth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight6.png" alt="Sixth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight7.png" alt="Seventh slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight8.png" alt="Eighth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight9.png" alt="Ninth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight10.png" alt="Tenth slide">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-5"><b>Insight 1:</b>
+                                        When we look at weekly data in 2021, we can see that there is increased activity at UIC-Halsted during weekdays compared to the weekend. This is because most classes are held from Monday to Friday.
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 2:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 3:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 4:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 5:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 6:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 7:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 8:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 9:</b>
+
+                                    </p>
+
+                                    <p class="mb-5"><b>Insight 10:</b>
+
+                                    </p>
+
+                                    <!-- GitHub repo link, data link, ShinyApps.io link, YouTube guideline link-->
+                                    <div>
+                                        <a class="btn btn-primary" href="https://github.com/akashmagnadia/cs424_p1" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>   GitHub
+                                        </a>
+                                        <a class="btn btn-primary" href="https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-database"></i>   Data Source
+                                        </a>
+                                        <a class="btn btn-primary" href="https://akashmagnadia.shinyapps.io/cs424_p1/" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-desktop"></i>   Visualization
+                                        </a>
+                                        <a class="btn btn-primary" href="" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-youtube"></i>   Video walk-through
+                                        </a>
+                                    </div>
+
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-times me-1"></i>
                                         Close Project
