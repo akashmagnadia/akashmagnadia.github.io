@@ -235,6 +235,7 @@
                                     <p class="mb-5">This is the first project in CS 424: Data Analysis and Visualization class.
                                         The primary intention for creating this visualization is to display ridership data for the
                                         CTA Train network for each station and years ranging from 2001 to 2021 in an easy-to-understand fashion.
+                                        This visualization is designed to run on a Touch-Screen wall at UIC with a ratio of 5,760 by 3,240 as per the assignment requirement.
                                         This project uses R as the main language, the following packages (shiny, shinydashboard, lubridate, scales, ggplot2, DT, tidyr) to preprocess, manipulate,
                                         and plot the data, RStudio as the primary development environment, and ShinyApps.io as the preferred location for the deployment of the app.</p>
 
@@ -242,22 +243,23 @@
 
                                     <img class="img-fluid d-block mx-auto" src="assets/img/project1/Screenshot_p1_2.png" alt="..." style="float: left; padding-right: 30px;"/>
                                     <p class="mb-5" style="text-align: justify;">In this visualization, the data is displayed in a variety of bar graphs and data tables.
-                                        On the left, there are four menu options to chose from. "About" give a brief introduction to the project.
-                                        "Graph and Table" takes you to the body that shows plots on the top portion and corresponding data for the plot in a table.
+                                        On the left, there are three menu options to chose from. "About" give a brief introduction to the project.
+                                        "Graphs and Tables" takes you to the body that is split into two displays.
+                                        Each portion of the display shows plots and corresponding data for the plot in a table.
+                                        They have their own set of controls so that you can manipulate two groups of graphs independently
                                         Here you can specify what pair of graph and table you want to display together.
-                                        You can choose to display data about each day in the year, each month in a year, or each day of the week in a year.
-                                        "Two Graphs" takes you to the body that shows a variety of plots on top and bottom with independent controls for both portions.
-                                        Here you can have the same set of controls, but they manipulate two groups of graphs independently.
+                                        You can choose to display data in the form of yearly data for every year, each day in the year, each month in a year, and/or each day of the week in a year.
                                         "Interesting insights" sets the control to point you towards an insight with a brief description regarding the insight.
-                                        For each group of plots, there are three types of control to customize how you would like to see that data. </p>
+                                        For each group of plots, there are four types of control to customize how you would like to see that data. </p>
 
                                     <img class="img-fluid d-block mx-auto" src="assets/img/project1/Screenshot_p1_1.png" alt="..." style="float: right; padding-left: 30px;"/>
                                     <p class="mb-5" style="text-align: justify;">The first thing you can do is control the time frame that you would like to hone in on.
-                                        For the time frame, there are three controls: Year, Month, and Week.
+                                        For the time frame, there are four controls: Yearly, Daily, Monthly, and Weekly.
                                         These controls can be selected and deselected in any combination to show the corresponding graph.
-                                        When "Year" is selected in Time Frame, the graph is shown for the range of time selected, whether that be one year or every year.
-                                        When "Month" is selected in Time Frame, the graph is shown to display data about the month for the selected time range, whether that be one year or every year.
-                                        When "Week" is selected in Time Frame, the graph is shown to display data about each day of the week for the selected time range, whether that be one year or every year.
+                                        When "Yearly" is selected in Time Frame, the graph shows sum of data for each year in one bar plot.
+                                        When "Daily" is selected in Time Frame, the graph is shown for the range of time selected, whether that be one year or every year.
+                                        When "Monthly" is selected in Time Frame, the graph is shown to display data about the month for the selected time range, whether that be one year or every year.
+                                        When "Weekly" is selected in Time Frame, the graph is shown to display data about each day of the week for the selected time range, whether that be one year or every year.
                                         The second thing you can do is select a year to populate data about a single year for the selected station(s).
                                         Furthermore, you can pick "Every" if you would like to see data from every year.
                                         The third thing you can do with controls is filter data by following three stations: UIC-Halsted, O'Hare Airport, and Rosemont.
@@ -324,13 +326,13 @@
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight4.png" alt="Forth slide">
-                                                 <div class="carousel-caption d-none d-md-block" style="text-align: start;">
+                                                 <div class="carousel-caption d-none d-md-block" style="text-align: center;">
                                                     <h5>Insight 4</h5>
                                                 </div>
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight5.png" alt="Fifth slide">
-                                                 <div class="carousel-caption d-none d-md-block" style="text-align: start;">
+                                                 <div class="carousel-caption d-none d-md-block" style="text-align: center;">
                                                     <h5>Insight 5</h5>
                                                 </div>
                                             </div>
@@ -348,7 +350,7 @@
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight8.png" alt="Eighth slide">
-                                                 <div class="carousel-caption d-none d-md-block" style="text-align: start;">
+                                                 <div class="carousel-caption d-none d-md-block" style="text-align: center;">
                                                     <h5>Insight 8</h5>
                                                 </div>
                                             </div>
@@ -360,7 +362,7 @@
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100 rounded" src="assets/img/project1/Screenshot_p1_insight10.png" alt="Tenth slide">
-                                                <div class="carousel-caption d-none d-md-block" style="text-align: start;">
+                                                <div class="carousel-caption d-none d-md-block" style="text-align: center;">
                                                     <h5>Insight 10</h5>
                                                 </div>
                                             </div>
@@ -418,7 +420,7 @@
                                         <a class="btn btn-primary" href="https://akashmagnadia.shinyapps.io/cs424_p1/" target="_blank" rel="noopener noreferrer">
                                             <i class="fas fa-desktop"></i>   Visualization
                                         </a>
-                                        <a class="btn btn-primary" href="https://youtu.be/jRgdrzKlQ3U" target="_blank" rel="noopener noreferrer">
+                                        <a class="btn btn-primary" href="https://youtu.be/AOJ_1KxXsQc" target="_blank" rel="noopener noreferrer">
                                             <i class="fab fa-youtube"></i>   Video walk-through
                                         </a>
                                     </div>
