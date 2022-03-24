@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -70,10 +70,10 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-folder-open fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/project2/p2_Akash_Magnadia.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Project 2</div>
+                                <div class="portfolio-caption-heading">Project 2 - CTA Subway Data Visualization with Map</div>
                             </div>
                         </div>
                     </div>
@@ -448,23 +448,309 @@
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-lg-8">
+                            <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Project 2</h2>
+                                    <p class="item-intro text-muted">CTA Subway Data Visualization with Map</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/p2_Akash_Magnadia.jpg" alt="..." />
+
+                                    <h3 class="text-secondary text-uppercase mb-1">Introduction</h3>
+                                    <p class="mb-5">This project is intended for visualizing the geographic information of all
+                                        the CTA L stations and also to find out the trends and interesting patterns in Chicago 'L' Station ridership data.</p>
+
+                                    <p class="mb-5">Bar chart on the first page ("All Stations") of the application shows total ridership entry of a single date of all the CTA stations.
+                                        The opacity of the stations on the map changes according to ridership entry.
+                                        Users can select a particular date using the option "Single Date" on the left side.
+                                        To highlight a station on the map and on the bar chart, the user can click on that station on the map or
+                                        use the dropdown menu "Stations" on the left. Users can also choose line colors using the dropdown menu "Lines on Map".
+                                        Initially "All lines" option is selected. Upon selecting a line color (ie: pink line),
+                                        the dropdown menu "Stations" will contain only the stations from the chosen line color.
+                                        The map will also display only those stations from the chosen line color. The bar chart can be sorted in ascending,
+                                        descending or alphabetic order using the dropdown menu "Sort Bar Chart" and the data table will also be sorted accordingly.
+                                        Users can easily navigate to previous or next date using the two buttons from bottom-left.</p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img1.png" alt="..." style="float: left; padding-right: 30px;"/>
+
+                                    <p class="mb-5">Upon selecting the checkbox "Ridership Difference between Two Dates",
+                                        users will be able to see the change in entries between two selected days (Date 1 and Date 2)
+                                        in a divergent color scheme on the bar chart. The data table and the map also change accordingly.</p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img2.png" alt="..." style="float: left; padding-right: 30px;"/>
+
+                                    <p class="mb-5">The second page ("One Station) gives users an overview of ridership data of a particular CTA station.
+                                        Users can select a particular station by clicking on it on the map or using the dropdown menu.
+                                        To narrow down the selection of station, users can choose a line color from the dropdown menu "Line On Map".
+                                        Initially "All Lines" option is selected. The yearly bar chart on the left will give a general overview of how
+                                        ridership data in a chosen CTA station changed over the years. On the right side, users can choose between three
+                                        chart types: daily, monthly, or weekdays. Users also have to select a particular year for which the chart on the
+                                        right side will be displayed. Users can also see the raw data below each chart.</p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img3.png" alt="..." style="float: left; padding-right: 30px;"/>
+
+                                    <p class="mb-5">On the "About" page, some details are listed such as creators of the application, date published,   data sources, data owner etc.</p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img4.png" alt="..." style="float: left; padding-right: 30px;"/>
+
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+
+                                    <h3 class="text-secondary text-uppercase mb-1">About the Data</h3>
+
+                                    <br/>
+                                    <h5 class="text-secondary text-uppercase mb-1">Data Source</h5>
+
+                                    <p class="mb-5" style="text-align: center;">
+                                        Two datasets were used to build the application.
+                                        Both datasets were collected from Chicago Data Portal.
+                                        <br/>
+                                        Dataset that contains information about all the CTA L stops including their latitude and longitude can be found
+                                        <a href="https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme" target="_blank" rel="noopener noreferrer">
+                                            here
+                                        </a> The file size is 48KB.
+                                        <br/>
+                                        Ridership data of all the CTA L stations can be found
+                                        <a href="https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f" target="_blank" rel="noopener noreferrer">
+                                            here
+                                        </a> The file size is 39MB.
+                                    </p>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Data Usage</h5>
+
+                                    <p class="mb-5" style="text-align: justify;">
+                                        The CTA L stops information data provides location and basic service availability information for each place on the CTA system where a
+                                        train stops, along with formal station names, stop descriptions, and line colors (RED, BLUE, G (Green), O (Orange), BRN (Brown), P (Purple),
+                                        Pexp (Purple Express), Y (Yellow), and Pnk (Pink)). DIRECTION_ID refers to the normal direction of train traffic at a platform (E - East, W- West,
+                                        N - North, S - South). STOP_ID is a unique identifier for each stop and MAP_ID is a unique identifier for each station. ADA column tells if the stop
+                                        is ADA (American’s with Disability Act) compliant.
+                                    </p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img5.png" alt="..."/>
+
+                                    <p class="mb-5" style="text-align: center;"><strong>Table 1: CTA - System Information - List of 'L' Stops</strong></p>
+
+                                    <p class="mb-5" style="text-align: justify;">
+                                        The ridership data contains entries of daily rides entries of all the CTA stations in Chicago starting 2001 to 2021.
+                                        The dataset shows entries at all turnstiles, combined, for each station. Daytypes are as follows: W = Weekday, A = Saturday, U = Sunday/Holiday.
+                                    </p>
+
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img6.png" alt="..."/>
+
+                                    <p class="mb-5" style="text-align: center;"><strong>Table 2: CTA L Station Ridership Data</strong></p>
+
+                                    <p class="mb-5" style="text-align: justify;">
+                                        The free web-based version of the Shiny server that was used to publish this project has a limit of 5 MB for each data file.
+                                        Thus, we split the ridership data file (39 MB) into smaller pieces to be able to upload it.
+                                        Python script used for splitting the ridership data and creating the TSV files is provided below:
+                                    </p>
+
+                                    <p class="mb-5" style="text-align: justify;">
+                                        <code>
+                                            #!/usr/bin/env python3
+                                            <br>
+                                            import csv
+                                            <br>
+                                            import os
+                                            <br>
+                                            import sys
+                                            <br>
+                                            os_path = os.path
+                                            <br>
+                                            csv_writer = csv.writer
+                                            <br>
+                                            sys_exit = sys.exit
+                                            <br>
+                                            <br>
+
+                                            if __name__ == '__main__':
+                                            <br>
+                                            # number of rows per file
+                                            <br>
+                                            chunk_size = 130000
+                                            <br>
+                                            # file path to master tsv file
+                                            <br>
+                                            file_path = "C:/Users/Akash/UIC/CS 424/tsv_splitter/CTA_-_Ridership_-__L__Station_Entries_-_Daily_Totals.tsv"
+                                            <br>
+                                            <br>
+
+                                            if (
+                                            <br>
+                                            not os_path.isfile(file_path) or
+                                            <br>
+                                            not file_path.endswith('.tsv')
+                                            <br>
+                                            ):
+                                            <br>
+                                            print('You must input path to .tsv file for splitting.')
+                                            <br>
+                                            sys_exit()
+                                            <br>
+                                            <br>
+
+                                            file_name = os_path.splitext(file_path)[0]
+                                            <br>
+                                            <br>
+
+                                            with open(file_path, 'r', newline='', encoding='utf-8') as tsv_file:
+                                            <br>
+                                            <br>
+
+                                            chunk_file = None
+                                            <br>
+                                            writer = None
+                                            <br>
+                                            counter = 1
+                                            <br>
+                                            reader = csv.reader(tsv_file, delimiter='\t', quotechar='\'')
+                                            <br>
+                                            <br>
+
+                                            # get header_chunk
+                                            <br>
+                                            header_chunk = None
+                                            <br>
+                                            for index, chunk in enumerate(reader):
+                                            <br>
+                                            header_chunk = chunk
+                                            <br>
+                                            header_chunk[0] = header_chunk[0][1:]
+                                            <br>
+                                            break
+                                            <br>
+                                            <br>
+
+                                            for index, chunk in enumerate(reader):
+                                            <br>
+                                            if index % chunk_size == 0:
+                                            <br>
+                                            if chunk_file is not None:
+                                            <br>
+                                            chunk_file.close()
+                                            <br>
+                                            <br>
+
+                                            chunk_name = '{0}_{1}.tsv'.format(file_name, counter)
+                                            <br>
+                                            chunk_file = open(chunk_name, 'w', newline='', encoding='utf-8')
+                                            <br>
+                                            counter += 1
+                                            <br>
+                                            writer = csv_writer(chunk_file, delimiter='\t', quotechar='\'')
+                                            <br>
+                                            writer.writerow(header_chunk)
+                                            <br>
+                                            <br>
+
+                                            print('File "{}" complete.'.format(chunk_name))
+                                            <br>
+                                            <br>
+
+                                            chunk[1] = chunk[1].replace("'", "")
+                                            <br>
+                                            <br>
+
+                                            writer.writerow(chunk)
+                                        </code>
+                                    </p>
+
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+
+                                    <h3 class="text-secondary text-uppercase mb-1">Interesting Findings</h3>
+                                    <br/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 1</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        As we look at the data or, the opacity of each station on the map during 2021, it seems that there were more riders on Red Line than any other line.
+                                        We can also observe that O'Hare station has the most riders of all stations when we look at every line.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img7.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 2</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        As we zoom in towards the loop, we can see that there are significantly more riders at stations in the loop and more ridership on Red Line
+                                        stations near the loop. One more interesting observation we can see is that the UIC-Halsted station stands out with darker blue shade as it
+                                        contains more than usual entries, which can be explained by the fact that about 85% of UIC students commute to the university.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img8.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 3</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        Among all the Red line CTA stations, 95th/Dan Ryan was the busiest during Covid lockdown restrictions.
+                                        It was also the third-busiest CTA station in 2020.
+                                        <a href="https://en.wikipedia.org/wiki/95th/Dan_Ryan_station" target="_blank" rel="noopener noreferrer">
+                                            Source
+                                        </a>.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img9.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 4</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        In 2019, Lake/State had an average of 19,364 weekday passenger entries, making
+                                        it the busiest 'L' station.
+                                        <a href="https://en.wikipedia.org/wiki/Lake_station_(CTA)" target="_blank" rel="noopener noreferrer">Source</a>.
+                                        During the Covid restrictions, it lost momentum in ridership. But after the restrictions were removed,
+                                        it again became the busiest red line station.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img10.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 5</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        Sox 35th Dan Ryan station usually has low number of riders but during games or concerts at Chicago
+                                        White Sox stadium the ridership data spikes. On September 24, 2016, Chicago White Sox stadium had a record
+                                        attendance of 47,754 hosting a concert of Chance the Rapper.
+                                        <a href="https://en.wikipedia.org/wiki/Guaranteed_Rate_Field" target="_blank" rel="noopener noreferrer">Source</a>.
+                                        Thus, we can see that the Sox 35th Dan Ryan station almost had as many entries of ridership as O'Hare Airport that day.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img11.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 6</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        As we can clearly see, most of the CTA stations have very less ridership entries on Christmas day (Dec 25th).
+                                        However, O'Hare remains busy as numerous people fly to and from Chicago Airports during Christmas.
+                                        <a href="https://wgntv.com/news/coronavirus/millions-expected-to-fly-to-and-from-chicago-airports-for-christmas/" target="_blank" rel="noopener noreferrer">Source</a>.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img12.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 7</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        On March 24, 2014 at 2:50 a.m. local time, a CTA passenger train overran the bumper at O'Hare, injuring 34 people.
+                                        Following the accident, the line between O'Hare and Rosemont was closed, with a replacement bus service in place.
+                                        We can clearly see from the bar chart, that due to that incident there were almost no ridership entries on OHare station on 24th March and the following week.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img13.png" alt="..."/>
+
+                                    <h5 class="text-secondary text-uppercase mb-1">Insight 8</h5>
+                                    <p class="mb-5" style="text-align: justify;">
+                                        The Grant Park Music Festival is a ten-week (Jul 2 – Aug 21, 2021) classical music concert series held annually in Chicago,
+                                        Illinois, United States. During this time Washington/Wabash station remains busy as it is the public transport access to Grant Park.
+                                        Also, the station remains busy as Millennium Park is a very popular destination for visitors.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/project2/img14.png" alt="..."/>
+
+                                    <!-- GitHub repo link, data link, ShinyApps.io link, YouTube guideline link-->
+                                    <div>
+                                        <a class="btn btn-primary" href="https://github.com/akashmagnadia/cs424_p2" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>   GitHub
+                                        </a>
+                                        <a class="btn btn-primary" href="https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-database"></i>   Data Source
+                                        </a>
+                                        <a class="btn btn-primary" href="https://akashmagnadia.shinyapps.io/cs424_p2/" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-desktop"></i>   Visualization
+                                        </a>
+                                        <a class="btn btn-primary" href="https://youtu.be/VtEGv0v-xSU" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-youtube"></i>   Video walk-through
+                                        </a>
+                                    </div>
+
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-times me-1"></i>
                                         Close Project
